@@ -1,96 +1,420 @@
-
-# Crudventory
-
-Un negocio comercial necesita una solución digital sencilla que le permita administrar su catálogo de productos y mostrarlo de forma pública a sus clientes. El negocio requiere un espacio administrativo desde el cual se puedan gestionar los productos del inventario, definir su estado de disponibilidad y controlar quién tiene acceso a dicha administración.
-
-La aplicación debe contar con un administrador inicial ya registrado, el cual pueda crear nuevos administradores para apoyar la gestión del sistema. El acceso a la interfaz administrativa debe estar protegido mediante una sesión activa, evitando el ingreso de usuarios no autorizados.
-
-Desde el panel administrativo, se debe permitir el registro y gestión de productos, asignando a cada uno un estado que determine su visibilidad y disponibilidad: publicado, borrador o agotado. Estos estados deben influir directamente en la visualización del catálogo público.
-
-La aplicación debe contar con una vista pública (landing) donde los clientes puedan visualizar únicamente los productos que se encuentren en estado publicado. Cada producto visible debe ofrecer un medio de contacto directo a través de WhatsApp, generando un mensaje predefinido que facilite la consulta del producto seleccionado.
-
-La solución debe permitir mantener la información de administradores, productos y estados del inventario de manera persistente, garantizando una experiencia simple, clara y funcional tanto para la administración como para la visualización pública del catálogo.
-
-
-## Objetivo general
-
-Desarrollar una aplicación web que permita administrar un catálogo de productos y presentarlo de forma pública, facilitando la gestión del inventario, el control de estados de los productos y la comunicación directa con los clientes mediante WhatsApp.
+# **SupCrud by Crudzaso**
 
 ---
 
-## Objetivos específicos por plataforma
+# 1. Descripción General del Proyecto
 
-### Plataforma administrativa
+SupCrud by Crudzaso es una plataforma SaaS de gestión de PQRS (Peticiones, Quejas, Reclamos y Sugerencias) que permite a negocios integrar un sistema de soporte en sus sitios web mediante un widget embebible.
 
-### Objetivo general de la plataforma administrativa
+El sistema debe permitir:
 
-Permitir la gestión completa del catálogo de productos y el control de acceso administrativo, garantizando que solo usuarios autorizados puedan administrar la información del sistema.
+* Creación y administración de múltiples workspaces.
+* Gestión de tickets por workspace.
+* Gestión de agentes por workspace.
+* Activación de funcionalidades adicionales (add-ons).
+* Consulta pública de tickets mediante código único.
+* Validación de identidad mediante OTP.
+* Integración de IA para clasificación y auto-asignación.
+* Gestión de adjuntos mediante Cloudinary.
+* Publicación de documentación técnica en Docusaurus.
 
-### Objetivos específicos
+El nombre del producto es fijo:
 
-- Acceder a una interfaz administrativa protegida mediante sesión.
-- Visualizar un panel central con la información del inventario.
-- Registrar nuevos productos en el sistema.
-- Definir y modificar el estado de cada producto:
-  - Publicado
-  - Borrador
-  - Agotado
-- Editar la información de los productos registrados.
-- Visualizar claramente el estado actual de cada producto.
-- Controlar qué productos se encuentran visibles para el público.
-- Registrar nuevos administradores desde la interfaz administrativa.
-- Visualizar la lista de administradores registrados.
-- Cerrar sesión de forma segura desde la plataforma administrativa.
-
-### Qué se espera ver en la plataforma administrativa
-
-- Un panel central de gestión.
-- Formularios para el registro de productos.
-- Listado completo de productos con su estado visible.
-- Opciones para cambiar el estado de los productos.
-- Sección para la gestión de administradores.
-- Indicadores claros del estado del inventario.
-
-### Qué se espera poder hacer en la plataforma administrativa
-
-- Administrar el catálogo completo de productos.
-- Publicar o despublicar productos.
-- Marcar productos como agotados.
-- Mantener el inventario actualizado.
-- Gestionar el acceso administrativo al sistema.
+**SupCrud by Crudzaso**
 
 ---
 
-## Plataforma pública (Landing)
+# 2. Arquitectura del Sistema
 
-### Objetivo general de la landing
+La solución debe componerse de:
 
-Presentar un catálogo de productos de forma clara y accesible para los clientes, mostrando únicamente los productos disponibles y facilitando el contacto directo con el negocio.
+* Frontend Web
+* Backend API
+* Base de datos SQL remota
+* Base de datos MongoDB Atlas
+* Cloudinary
+* Integración con OpenAI API
+* Docusaurus desplegado
 
-### Objetivos específicos
+Todas las partes deben estar desplegadas públicamente usando herramientas gratuitas.
 
-- Visualizar un catálogo público de productos.
-- Mostrar únicamente los productos en estado publicado.
-- Presentar información clara de cada producto:
-  - Nombre
-  - Precio
-- Indicar de forma visual la disponibilidad del producto.
-- Facilitar la consulta de productos mediante WhatsApp.
+---
 
-### Qué se espera ver en la landing
+# 3. Niveles del Sistema
 
-- Un listado de productos disponibles.
-- Información clara y ordenada de cada producto.
-- Un botón de contacto por producto.
-- Un diseño simple y fácil de navegar.
+---
 
-### Qué se espera poder hacer en la landing
+## 3.1 Owner Global (Administrador de SupCrud)
 
-- Explorar el catálogo de productos.
-- Consultar información básica de los productos.
-- Contactar al negocio directamente por WhatsApp desde un producto específico.
+Es el administrador principal de la plataforma completa.
 
+### Autenticación
 
-<img width="1435" height="697" alt="Captura de pantalla 2026-01-19 a la(s) 8 05 59 p m" src="https://gist.github.com/user-attachments/assets/2903c3a8-6981-43d5-a14c-c0cfaced5ef0" />
-<img width="1432" height="699" alt="Captura de pantalla 2026-01-19 a la(s) 8 09 26 p m" src="https://gist.github.com/user-attachments/assets/35f7b2f2-edd5-46c1-b08f-3767f2124b7a" />
-<img width="1439" height="697" alt="Captura de pantalla 2026-01-19 a la(s) 8 09 05 p m" src="https://gist.github.com/user-attachments/assets/2ffe1548-ba6d-4d4a-a8e0-25efe8a5edbb" />
+* Email y contraseña.
+* El correo debe tener formato:
+
+  [nombredelteam@crudzaso.com](mailto:nombredelteam@crudzaso.com)
+
+No debe permitir Google OAuth para este rol.
+
+### Funcionalidades obligatorias
+
+Debe poder:
+
+* Ver listado completo de workspaces.
+* Ver estado de cada workspace (ACTIVE / SUSPENDED).
+* Suspender o reactivar un workspace.
+* Ver métricas globales:
+
+  * Número total de tickets por workspace.
+  * Tickets abiertos por workspace.
+  * Add-ons activos por workspace.
+* Gestionar catálogo de add-ons disponibles en la plataforma.
+
+Este panel no pertenece a ningún workspace.
+
+---
+
+## 3.2 Workspace
+
+Cada workspace representa un negocio independiente.
+
+Cada workspace debe tener:
+
+* Identificador único `workspaceKey`.
+* Configuración propia.
+* Add-ons activables individualmente.
+* Usuarios asociados (ADMIN y AGENT).
+* Tickets asociados.
+* Configuración de IA.
+
+---
+
+## 3.3 Autenticación Workspace
+
+ADMIN y AGENT deben poder autenticarse mediante:
+
+* Email + contraseña.
+* Google OAuth.
+
+Un usuario puede pertenecer a múltiples workspaces.
+
+Si pertenece a más de uno:
+
+* Debe existir un selector de workspace tras autenticarse.
+* El sistema debe operar únicamente bajo el workspace seleccionado.
+
+---
+
+# 4. Flujo del Usuario Final
+
+El usuario final no tiene cuenta ni autenticación tradicional.
+
+---
+
+## 4.1 Creación del Ticket
+
+Desde el widget embebible el usuario debe poder:
+
+* Ingresar email válido.
+* Ingresar asunto.
+* Ingresar descripción.
+* Seleccionar tipo:
+
+  * P
+  * Q
+  * R
+  * S
+* Adjuntar archivos (si add-on activo).
+
+### Al crear el ticket:
+
+El sistema debe:
+
+* Generar un `referenceCode` único global.
+* El código debe:
+
+  * Ser único en toda la plataforma.
+  * Permitir identificar el workspace automáticamente.
+  * No requerir que el usuario indique workspace.
+* Guardar el ticket.
+* Registrar evento de creación.
+* Enviar correo al usuario con el código.
+
+---
+
+# 5. Consulta Pública de Ticket
+
+Debe existir una página pública accesible sin autenticación.
+
+El usuario debe ingresar únicamente:
+
+referenceCode
+
+El sistema debe:
+
+* Identificar el workspace.
+* Buscar el ticket correspondiente.
+
+---
+
+## 5.1 Vista Básica
+
+Debe mostrar:
+
+* Estado actual.
+* Fecha de creación.
+* Última actualización.
+
+No debe mostrar:
+
+* Conversación.
+* Adjuntos.
+* Historial completo.
+* Asignación.
+
+---
+
+## 5.2 Vista Completa (Requiere OTP)
+
+Para acceder al detalle completo:
+
+1. Usuario solicita OTP.
+2. Sistema genera código temporal.
+3. Se envía al correo asociado al ticket.
+4. Usuario ingresa OTP.
+5. Si es válido:
+
+   * Se habilita acceso temporal.
+   * Se muestra:
+
+     * Conversación completa.
+     * Historial completo.
+     * Adjuntos.
+     * Información de asignación.
+     * Datos adicionales del ticket.
+
+### Reglas de OTP
+
+* Expiración obligatoria.
+* Límite de intentos.
+* Registro de evento de validación.
+* Debe invalidarse tras uso o expiración.
+
+---
+
+# 6. Panel Workspace
+
+---
+
+## 6.1 Gestión de Agentes
+
+ADMIN debe poder:
+
+* Invitar agente por correo.
+* Generar token con expiración.
+* Asociar usuarios existentes.
+* Crear usuario nuevo si no existe.
+
+Debe existir control de roles por workspace.
+
+---
+
+## 6.2 Gestión de Tickets
+
+La bandeja debe incluir:
+
+* Filtro por estado.
+* Filtro por tipo.
+* Filtro por prioridad.
+* Filtro por agente.
+* Filtro por fecha.
+* Paginación obligatoria.
+
+### Detalle del Ticket
+
+Debe permitir:
+
+* Ver información general.
+* Ver historial de eventos.
+* Ver conversación.
+* Responder.
+* Cambiar estado.
+* Asignar o reasignar agente.
+* Visualizar adjuntos.
+
+Estados obligatorios:
+
+* OPEN
+* IN_PROGRESS
+* RESOLVED
+* CLOSED
+* REOPENED
+
+---
+
+# 7. Add-ons por Workspace
+
+Cada workspace puede activar funcionalidades individuales.
+
+El backend debe validar que el add-on esté activo antes de ejecutar la funcionalidad.
+
+---
+
+## 7.1 Attachments
+
+* Permite subir archivos.
+* Debe integrarse con Cloudinary.
+* Guardar metadata en base de datos.
+* Si no está activo:
+
+  * No permitir subida.
+  * Backend debe rechazar solicitudes.
+
+---
+
+## 7.2 AI Assist
+
+Debe integrarse con la API de OpenAI.
+
+Debe permitir:
+
+* Sugerir etiquetas.
+* Sugerir categoría.
+* Sugerir prioridad.
+* Sugerir agente.
+
+### Configuración por Workspace
+
+* mode: APPROVAL | AUTO
+* autoAssignEnabled
+* confidenceThreshold
+
+### Auto-asignación
+
+Cada agente debe poder definir:
+
+* Tipos de tickets que atiende.
+* Categorías que atiende.
+
+La IA debe:
+
+* Analizar el ticket.
+* Sugerir o asignar automáticamente a un agente que cumpla con esos criterios.
+
+En modo AUTO:
+
+* Si confidence >= threshold → asignar automáticamente.
+* Si no → dejar como sugerencia.
+
+Debe registrarse evento cuando IA aplica cambios.
+
+---
+
+## 7.3 Knowledge Base (Opcional)
+
+Debe permitir:
+
+* Crear artículo.
+* Editar artículo.
+* Publicar o despublicar.
+* Buscar por palabra clave.
+* Paginación obligatoria.
+
+Los artículos deben ser visibles en el widget.
+
+---
+
+# 8. Persistencia
+
+La estructura de base de datos es sugerida, no impuesta.
+
+La implementación debe cumplir:
+
+* Separación estricta por workspace.
+* Unicidad del referenceCode.
+* Control de roles.
+* Control de add-ons.
+* Soporte para paginación.
+* Soporte para historial de eventos.
+* Soporte para OTP.
+* Soporte para adjuntos.
+
+Se sugiere:
+
+* SQL para identidad y control.
+* MongoDB para tickets y operaciones dinámicas.
+
+La estructura final es decisión del equipo.
+
+---
+
+# 9. Requisitos Técnicos Obligatorios
+
+## Backend
+
+Debe:
+
+* Exponer API REST.
+* Tener Swagger documentado.
+* Validar autenticación y roles.
+* Validar workspace activo.
+* Validar add-ons antes de ejecutar funciones.
+* Validar OTP.
+* Generar códigos únicos seguros.
+* Integrar OpenAI desde backend.
+* Integrar Cloudinary.
+
+---
+
+## Frontend
+
+Debe incluir:
+
+* Landing.
+* Panel Owner.
+* Panel Workspace.
+* Widget embebible.
+* Página pública de consulta.
+
+Debe:
+
+* Implementar paginación real.
+* Manejar estados de carga y error.
+* Soportar Google OAuth.
+* Mostrar nombre del equipo visible.
+* El diseño visual es decisión del equipo.
+
+---
+
+# 10. Despliegue
+
+Debe estar desplegado:
+
+* Frontend.
+* Backend.
+* Swagger.
+* Docusaurus.
+
+Las herramientas de despliegue son libres siempre que:
+
+* No requieran pago.
+* Sean públicas.
+* Funcionen correctamente.
+
+---
+
+# 11. Documentación
+
+Debe publicarse en Docusaurus e incluir:
+
+* Descripción general.
+* Arquitectura.
+* Modelo de datos.
+* Flujos completos.
+* Gestión de add-ons.
+* Configuración de entorno.
+* Links de despliegue.
+* Nombre del equipo visible.
+
+---

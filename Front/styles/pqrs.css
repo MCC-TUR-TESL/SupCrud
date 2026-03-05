@@ -109,19 +109,6 @@
     display: block;
 }
 
-.pqrs-type-badge {
-    display: inline-block;
-    background-color: #e8f4f8;
-    color: #0097a7;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
 .pqrs-form {
     width: 100%;
 }

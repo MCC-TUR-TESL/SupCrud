@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details | ToolStore</title>
+    <!-- Links de Bootstrap y estilos de CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+
+    <!--Sweet Alert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+</head>
+<body>
+    <!-- Navbar superior de la página -->
+    <div id="nav-back-color">
+        <div id="nav-back-color">
+        <header class="container">
+            <nav class="row" id="nav-row">
+                <!-- Columna izquierda del Navbar -->
+                <div class="col" id="nav-logo-box">
+                    <div id="nav-logo">ToolStore</div>
+                </div>
+                <!-- Columna derecha del Navbar -->
+                <div class="col" id="nav-menu-box">
+                    <div class="nav-menu-txt-box">
+                        <a href="./index.html" class="nav-menu-txt">Inicio</a>
+                    </div>
+                    <div class="nav-menu-txt-box">
+                        <a href="./index.html#cardsContainerOne" class="nav-menu-txt">Productos</a>
+                    </div>
+                    <div class="nav-menu-txt-box">
+                        <button class="nav-menu-txt" id="btnContact">Contacto</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <!-- Contenido principal de la página -->
+    <main>
+        <!-- Sección de los detalles del producto -->
+        <div id="details-back-color">
+        <section class="container" id="product-details">
+            <div class="row orden">
+                <h2 class="subtitle-page">Detalles del Producto</h2>
+                <div class="col col-lg-4 d-flex flex-column align-items-center">
+                    <div class="product-img-box">
+                        
+                    </div>
+                    <div class="boxxx">
+                        <button class="btn btn-danger btn-lg" id="buy-now">¡COMPRAR AHORA!</button>
+                    </div>
+                </div>
+                <div class="col col-lg-8">
+                    <div class="row">
+                        <div class="col col-lg boxxx">
+                        <div class="name-product">
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg boxxx" id="dispo">
+                            
+                        </div>
+                        <div class="col col-lg boxxx">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-half text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                            <div>  (564 Reviews)</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg boxx" id="pre-price">
+                            
+                        </div>
+                        <div class="col col-lg boxx" id="current-price">
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg boxx">
+                            <div><b>Descripción:</b></div>
+                            <p class="description-product">
+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-lg boxx">
+                            <div><b>WhatsApp:</b></div>
+                            <p class="description-product">
+                                Escribe a nuestro canal de atención en WhatsApp y uno de nuestros asesores te atenderá.
+                            </p>
+                            <button class="btn btn-success" id="wpp">WhatsApp</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </div>
+    </main>
+    <!-- Sección del Footer -->
+    <div id="footer-back-color">
+    <footer class="container">
+        <div class="row footer-row">
+            <div class="col-lg-6 col-md-5 col-sm-5">
+                <div id="footer-title">ToolStore</div>
+                <p class="footer-text">Nuestra visión es proporcionar calidad y ayudarte a mejorar tu trabajo con buenas herramientas.</p>
+            </div>
+            <div class="col-lg col-md col-sm-5">
+                <div class="footer-subtitle">¿Quienes Somos?</div>
+                <p class="footer-text">Historia</p>
+                <p class="footer-text">Método de trabajo</p>
+                <p class="footer-text">Equipo</p>
+                <p class="footer-text">Proveedores</p>
+            </div>
+            <div class="col-lg col-md col-sm-5">
+                <div class="footer-subtitle">Comunidad</div>
+                <p class="footer-text">Eventos</p>
+                <p class="footer-text">Blog</p>
+                <p class="footer-text">Podcast</p>
+                <p class="footer-text">Referidos</p>
+            </div>
+            <div class="col-lg col-md col-sm-5">
+                <div class="footer-subtitle">Redes Sociales</div>
+                <p class="footer-text">Discord</p>
+                <p class="footer-text">Instagram</p>
+                <p class="footer-text">Twitter</p>
+                <p class="footer-text">Facebook</p>
+            </div>
+        </div>
+        <div class="row footer-row">
+            <div class="col-lg-7 col-md-6 col-sm-4">
+                <div class="footer-last">©2026. All rights reserved</div>
+            </div>
+            <div class="col-lg col-md-2 col-sm-4">
+                <div class="footer-last">Privacy & Policy</div>
+            </div>
+            <div class="col-lg col-md-2 col-sm-4">
+                <div class="footer-last">Terms & Condition</div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="./api/getProduct.js" type="module"></script>
+    <script src="./js/contact.js"></script>
+</body>
+</html>

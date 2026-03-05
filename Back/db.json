@@ -1,0 +1,457 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Admin Principal",
+      "email": "admin@ferreteria.com",
+      "role": "admin",
+      "password": "111"
+    },
+    {
+      "name": "usuario",
+      "email": "user@gmail.com",
+      "password": "111",
+      "role": "user",
+      "id": "g7wGolz"
+    },
+    {
+      "id": "e2ee",
+      "name": "Juan David",
+      "email": "test2@example.com",
+      "password": "123456",
+      "role": "user"
+    },
+    {
+      "name": "User123",
+      "email": "User123@gmail.com",
+      "password": "123",
+      "role": "user",
+      "id": "f8kAYzl"
+    },
+    {
+      "name": "uSER456",
+      "email": "user456@gmail.com",
+      "password": "123",
+      "role": "admin",
+      "id": "XutyheG"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Maquinaria y Equipos",
+      "description": "Generadores, mezcladoras, herramientas eléctricas pesadas y sistemas solares."
+    },
+    {
+      "id": "2",
+      "name": "Pintura y Acabados",
+      "description": "Brochas, rodillos y pinturas para protección y decoración de superficies."
+    },
+    {
+      "id": "3",
+      "name": "Herramientas de Mano",
+      "description": "Alicates, destornilladores, llaves Allen y herramientas manuales de construcción."
+    },
+    {
+      "id": "4",
+      "name": "Plomería y Gas",
+      "description": "Tuberías, codos, válvulas, mangueras y accesorios para redes de agua y gas."
+    }
+  ],
+  "products": [
+    {
+      "id": "101",
+      "name": "Codo PVC 90° de 1/2 pulgada",
+      "category_id": 4,
+      "price": 2800,
+      "stock": 150,
+      "description": "Codo de presión en PVC para conducción de agua potable.",
+      "images": [
+        ".././Front/assets/products/101.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "102",
+      "name": "Codo de Cobre 90° para soldar",
+      "category_id": 4,
+      "price": 9500,
+      "stock": 43,
+      "description": "Accesorio de cobre ideal para instalaciones de agua caliente y gas.",
+      "images": [
+        ".././Front/assets/products/102.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "103",
+      "name": "Tee Gas PE-AL-PE Amarilla",
+      "category_id": 4,
+      "price": 18900,
+      "stock": 30,
+      "description": "Conexión en T para tubería multicapa de gas.",
+      "images": [
+        ".././Front/assets/products/103.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "105",
+      "name": "Manguera para Gas Natural 3/8 Alta Presión",
+      "category_id": 4,
+      "price": 145000,
+      "stock": 12,
+      "description": "Rollo de manguera reforzada para instalaciones certificadas.",
+      "images": [
+        ".././Front/assets/products/105.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "106",
+      "name": "Válvula Cheque en Bronce",
+      "category_id": 4,
+      "price": 38500,
+      "stock": 20,
+      "description": "Válvula de retención de flujo unidireccional.",
+      "images": [
+        ".././Front/assets/products/106.jpg"
+      ],
+      "product_state": 2
+    },
+    {
+      "id": "112",
+      "name": "Manómetro de Presión 100 PSI",
+      "category_id": 4,
+      "price": 45000,
+      "stock": 18,
+      "description": "Medidor de presión analógico para sistemas de agua o aire.",
+      "images": [
+        ".././Front/assets/products/112.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "115",
+      "name": "Válvula de Bola para Gas 1/2\"",
+      "category_id": 4,
+      "price": 24500,
+      "stock": 60,
+      "description": "Válvula de paso rápido para control de gas natural o GLP.",
+      "images": [
+        ".././Front/assets/products/115.jpg"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "107",
+      "name": "Alicate Pelacables Profesional Ubermann",
+      "category_id": 3,
+      "price": 64900,
+      "stock": 15,
+      "description": "Pinza multifunción para electricidad con mangos aislados.",
+      "images": [
+        ".././Front/assets/products/107.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "109",
+      "name": "Juego de Destornilladores Stanley x6",
+      "category_id": 3,
+      "price": 89900,
+      "stock": 25,
+      "description": "Set de 6 piezas con puntas magnéticas.",
+      "images": [
+        ".././Front/assets/products/109.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "111",
+      "name": "Set de Llaves Allen SAE Ubermann",
+      "category_id": 3,
+      "price": 52000,
+      "stock": 0,
+      "description": "Juego de llaves hexagonales en pulgadas.",
+      "images": [
+        ".././Front/assets/products/111.webp"
+      ],
+      "product_state": 3
+    },
+    {
+      "id": "116",
+      "name": "Palustre de Construcción 6\"",
+      "category_id": 3,
+      "price": 14900,
+      "stock": 40,
+      "description": "Herramienta metálica para aplicación de morteros.",
+      "images": [
+        ".././Front/assets/products/116.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "108",
+      "name": "Brocha Pretul 3 Pulgadas",
+      "category_id": 2,
+      "price": 8200,
+      "stock": 100,
+      "description": "Brocha de cerdas naturales con mango de madera.",
+      "images": [
+        ".././Front/assets/products/108.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "117",
+      "name": "Pintura Fachada Kolor Premium 5 Gal",
+      "category_id": 2,
+      "price": 455000,
+      "stock": 12,
+      "description": "Pintura de alta gama para exteriores con protección UV.",
+      "images": [
+        ".././Front/assets/products/117.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "120",
+      "name": "Rodillo para Pintar Profesional",
+      "category_id": 2,
+      "price": 16800,
+      "stock": 80,
+      "description": "Rodillo de felpa con mango anatómico.",
+      "images": [
+        ".././Front/assets/products/120.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "110",
+      "name": "Generador Eléctrico Arvek GE 950G",
+      "category_id": 1,
+      "price": 1250000,
+      "stock": 4,
+      "description": "Planta eléctrica portátil a gasolina.",
+      "images": [
+        ".././Front/assets/products/110.webp"
+      ],
+      "product_state": 3
+    },
+    {
+      "id": "113",
+      "name": "Mezcladora de Concreto Bauker",
+      "category_id": 1,
+      "price": 2550000,
+      "stock": 1,
+      "description": "Mezcladora tipo trompo de alta resistencia.",
+      "images": [
+        ".././Front/assets/products/113.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "114",
+      "name": "Motosierra a Gasolina Alterman",
+      "category_id": 1,
+      "price": 820000,
+      "stock": 6,
+      "description": "Motosierra profesional con motor de alto desempeño.",
+      "images": [
+        ".././Front/assets/products/114.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "118",
+      "name": "Kit Sistema Solar Fotovoltaico",
+      "category_id": 1,
+      "price": 1650000,
+      "stock": 5,
+      "description": "Incluye paneles solares y unidad de control.",
+      "images": [
+        ".././Front/assets/products/118.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "119",
+      "name": "Esmeriladora Angular 4-1/2\"",
+      "category_id": 1,
+      "price": 220000,
+      "stock": 14,
+      "description": "Pulidora eléctrica potente para corte y desbaste.",
+      "images": [
+        ".././Front/assets/products/119.webp"
+      ],
+      "product_state": 1
+    },
+    {
+      "id": "121",
+      "name": "Combo Caladora y Lijadora Black+Decker",
+      "category_id": 1,
+      "price": 315000,
+      "stock": 0,
+      "description": "Set de herramientas eléctricas esenciales.",
+      "images": [
+        ".././Front/assets/products/121.webp"
+      ],
+      "product_state": 3
+    },
+    {
+      "name": "Juego de 42 herramientas Pretul Comfort Grip SET‑42",
+      "category_id": 1,
+      "price": 180000,
+      "stock": 30,
+      "description": "Este Juego de Herramientas Pretul 42 piezas Comfort Grip es un set completo ideal para el hogar, taller o proyectos de mantenimiento general. Viene en un práctico estuche plástico con organizadores internos para mantener todas las piezas ordenadas y de fácil acceso. Cada herramienta está claramente marcada para identificación rápida, y el diseño Comfort Grip ofrece un agarre cómodo durante su uso.",
+      "product_state": 1,
+      "images": [
+        "https://ferreteriaya.com.co/wp-content/uploads/2020/06/Juego-de-Herramienta-42-Piezas-Pretul-22101-SF.png"
+      ],
+      "id": "Z5SuOrF"
+    },
+    {
+      "name": "Kit Multiherramientas 6 Piezas Multifunción",
+      "category_id": 1,
+      "price": 119000,
+      "stock": 30,
+      "description": "ste Kit Multiherramientas Ferreteras Premium reúne las herramientas esenciales que todo aficionado o profesional necesita para tareas de mantenimiento, bricolaje y construcción liviana",
+      "product_state": 1,
+      "images": [
+        "https://media.falabella.com/falabellaCO/132261088_01/w=1500,h=1500,fit=cover"
+      ],
+      "id": "1Es37Id"
+    }
+  ],
+  "config": {
+    "site_name": "Ferretería El Tornillo",
+    "logo_url": "url",
+    "theme_color": "#",
+    "contact": {
+      "email": "contacto@ferreteria.com",
+      "phone": "+57##########",
+      "address": "Calle Falsa 123, Ciudad, País"
+    },
+    "social_links": {
+      "facebook": "https://facebook.com/ferreteria",
+      "instagram": "https://instagram.com/ferreteria",
+      "twitter": "https://twitter.com/ferreteria"
+    }
+  },
+  "product_state": [
+    {
+      "id": "1",
+      "state": "Publicado"
+    },
+    {
+      "id": "2",
+      "state": "Borrador"
+    },
+    {
+      "id": "3",
+      "state": "Agotado"
+    }
+  ],
+  "sales": [
+    {
+      "id": "1",
+      "user_id": 2,
+      "products": [
+        {
+          "product_id": 101,
+          "quantity": 2
+        },
+        {
+          "product_id": 103,
+          "quantity": 5
+        }
+      ],
+      "total": 670,
+      "date": "2026-01-19T15:20:00Z",
+      "status": "completed"
+    }
+  ],
+  "landing_page": {
+    "hero_section": {
+      "title": "Todo para tu Ferretería en un solo lugar",
+      "subtitle": "Encuentra herramientas y materiales de calidad",
+      "background_image": "url",
+      "cta_text": "Comprar Ahora",
+      "cta_link": "/productos"
+    },
+    "features": [
+      {
+        "icon": "fa-truck",
+        "title": "Envío Rápido",
+        "description": "Entrega en 24-48 horas"
+      },
+      {
+        "icon": "fa-shield",
+        "title": "Productos Garantizados",
+        "description": "Calidad comprobada"
+      },
+      {
+        "icon": "fa-tags",
+        "title": "Mejores Precios",
+        "description": "Ofertas y descuentos constantes"
+      }
+    ],
+    "banners": [
+      {
+        "id": 1,
+        "image": "https://example.com/landing/banner1.jpg",
+        "link": "/ofertas",
+        "title": "Promociones de la Semana",
+        "description": "Aprovecha nuestras ofertas especiales"
+      }
+    ],
+    "testimonials": [
+      {
+        "id": 1,
+        "name": "Juan Pérez",
+        "role": "Cliente",
+        "comment": "Excelente atención y productos de calidad",
+        "avatar": "https://example.com/avatars/juan.png"
+      }
+    ],
+    "newsletter": {
+      "title": "Suscríbete a nuestro boletín",
+      "placeholder": "Tu correo electrónico",
+      "button_text": "Suscribirse"
+    }
+  },
+  "dashboard": {
+    "stats": {
+      "total_users": 5,
+      "total_sales": 1,
+      "total_revenue": 670,
+      "total_products": 22
+    },
+    "recent_sales": [
+      {
+        "id": 1,
+        "user": "Empleado Tienda",
+        "products": [
+          {
+            "name": "Martillo 16oz",
+            "quantity": 2
+          },
+          {
+            "name": "Cemento Gris 25kg",
+            "quantity": 5
+          }
+        ],
+        "total": 670,
+        "date": "2026-01-19T15:20:00Z"
+      }
+    ],
+    "low_stock_alerts": [
+      {
+        "product_id": 102,
+        "product_name": "Taladro Eléctrico 500W",
+        "stock": 30
+      }
+    ]
+  }
+}

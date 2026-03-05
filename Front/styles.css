@@ -1,0 +1,247 @@
+/* Conexión de la fuente de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Configuración raíz para toda la página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Estilos para el Navbar superior de la página */
+#nav-back-color {
+    background-color: black;
+}
+
+#nav-logo-box {
+    display: flex;
+    align-items: center;
+}
+
+#nav-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #EECA10;
+}
+
+#nav-menu-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-menu-txt-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    height: 40px;
+    border-radius: 2px;
+    transition: 0.2s;
+}
+
+.nav-menu-txt-box:hover {
+    background-color: #EECA10;
+}
+
+.nav-menu-txt {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    color: #EECA10;
+    transition: 0.2s;
+    background: none;
+    border: none;
+}
+
+.nav-menu-txt:hover {
+    color: black;
+}
+
+/* Estilos para el Hero */
+#hero-section {
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url("./assets/images/hero-background.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#hero-col-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#h1-hero {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.info {
+    color: white;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.general-button {
+    border: none;
+    background-color: #EECA10;
+    color: black;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    transition: 0.2s;
+}
+
+.general-button:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para los productos más vendidos */
+.orden {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.subtitle-page {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+}
+.catalog-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Estilos para detalles del producto */
+#details-back-color {
+    background-color: rgb(240, 240, 240);
+}
+
+.product-img-box {
+    width: 25rem;
+    height: 25rem;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.product-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name-product {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.boxxx {
+    display: flex;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.boxx {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 10px;
+}
+
+.price-before {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    color: gray;
+    text-decoration: line-through;
+}
+
+.price-after {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    color: red;
+    /* background-color: orange; */
+    width: max-content;
+}
+
+/* Estilos para el footer */
+#footer-back-color {
+    background-color: black;
+}
+
+#footer-title {
+    color: #EECA10;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: .625rem;
+}
+
+.footer-text {
+    color: white;
+    font-weight: 500;
+    font-size: 1rem;
+    max-width: 17.5rem;
+    margin-top: .625rem;
+    margin-bottom: .625rem;
+}
+
+.footer-subtitle {
+    color: #EECA10;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.footer-last {
+    color: #EECA10;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 3.75rem;
+}
+
+.footer-row {
+    padding-top: 50px;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #nav-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #nav-menu-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    #nav-logo-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

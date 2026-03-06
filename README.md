@@ -76,3 +76,26 @@ JSON - SERVER
      ├── .gitignore
      ├── index.html  #Redirects to frontend/index.html
      └── README.md
+
+
+## Ejecutar el servidor express
+### Dependencias necesarias
+```
+    "axios": "^1.13.6",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.19.0",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.26.0"
+```
+### Crear el ``.env`` con las variables de entorno dentro de `Back/express`
+```
+.env
+``
+
+
+### Dentro de la carpeta `Back/express` ejecutar:
+```
+npm install axios cors dotenv express mysql2 node-fetch openai
+```

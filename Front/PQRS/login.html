@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Log In | ToolStore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore-compat.js"></script>
+
+  <script defer src="./js/logn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <style>
+    body {
+      margin: 0;
+      overflow-x: hidden;
+
+      background: url("../assets/images/hero-background.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* overlay para mejorar contraste */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      z-index: -1;
+    }
+
+    /* ===== FONDO ANIMADO ===== */
+
+    .background-wrapper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      pointer-events: none;
+    }
+
+    .ribbon {
+      white-space: nowrap;
+      font-size: 3rem;
+      font-weight: 800;
+      color: white;
+      opacity: 0.15;
+      letter-spacing: 8px;
+    }
+
+    .move-left {
+      animation: moveLeft 50s linear infinite;
+    }
+
+    .move-right {
+      animation: moveRight 50s linear infinite;
+    }
+
+    @keyframes moveLeft {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes moveRight {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    /* ===== CARD GLASS ===== */
+
+    .glass-card {
+      background: rgba(77, 71, 234, 0.074);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(113, 72, 236, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    /* ===== RESPONSIVE ===== */
+
+    @media (max-width: 768px) {
+      .ribbon {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .ribbon {
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+      }
+
+      .card-body {
+        padding: 2rem !important;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <!-- ===== LOGIN ===== -->
+  <div class="container">
+    <div class="row justify-content-center align-items-center min-vh-100">
+      <div class="col-11 col-sm-9 col-md-8 col-lg-5 col-xl-5">
+
+        <div class="card border-0 glass-card">
+          <div class="card-body p-5">
+
+            <div class="text-center mb-4 text-warning fw-bold">
+                <h1 class="fw-bolder text-warning" style="font-size: 3rem;">ToolStore</h1>
+            </div>
+
+            <div class="d-grid mb-3">
+              <button id="loginBtn" class="btn btn-light rounded-pill py-3 fw-semibold">
+                <i class="bi bi-google me-2"></i>
+                Iniciar sesión con Google
+              </button>
+            </div>
+
+
+            <div id="emailList" class="mt-4 text-light"></div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

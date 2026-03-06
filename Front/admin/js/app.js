@@ -338,5 +338,8 @@ document.querySelector('.manage-products').addEventListener('click', loadProduct
 document.querySelector('.Landing-page').addEventListener('click', () => {
   window.location = '../index.html';
 })
+document.querySelector('.manage-pqrs').addEventListener('click', () => {
+  window.location = '../PQRS/login.html';
+})
 // ================= INIT =================
 document.addEventListener('DOMContentLoaded', loadDashboard);

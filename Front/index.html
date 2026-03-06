@@ -111,10 +111,10 @@
                             <label for="pqrs-tipo">Tipo de solicitud <span class="text-danger">*</span></label>
                             <select class="form-select" id="pqrs-tipo" required>
                                 <option value="" disabled selected>Selecciona una opción...</option>
-                                <option value="peticion">📋 Petición</option>
-                                <option value="queja">😟 Queja</option>
-                                <option value="reclamo">⚠️ Reclamo</option>
-                                <option value="sugerencia">💡 Sugerencia</option>
+                                <option value="1"> Petición</option>
+                                <option value="2"> Queja</option>
+                                <option value="3"> Reclamo</option>
+                                <option value="4"> Sugerencia</option>
                             </select>
                             <div class="invalid-feedback">Por favor selecciona un tipo.</div>
                         </div>
@@ -123,6 +123,12 @@
                             <input type="text" class="form-control" id="pqrs-nombre" placeholder="Ej: Juan Pérez"
                                 required>
                             <div class="invalid-feedback">Ingresa tu nombre.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pqrs-email">Correo electrónico <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="pqrs-email"
+                                placeholder="Ej: carlos.restrepo@ejemplo.com" required>
+                            <div class="invalid-feedback">Ingresa tu correo electronico.</div>
                         </div>
                         <div class="mb-3">
                             <label for="pqrs-tel">Teléfono <span class="text-muted fw-normal">(opcional)</span></label>

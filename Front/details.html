@@ -107,6 +107,79 @@
     <!-- Sección del Footer -->
     <div id="footer-back-color">
     <footer class="container">
+        <button id="pqrs-trigger" aria-label="Abrir formulario PQRS" aria-expanded="false">
+                <i class="bi bi-chat-dots-fill pqrs-icon"></i>
+                <span class="pqrs-label">PQRS</span>
+            </button>
+
+            <div id="pqrs-panel" role="dialog" aria-modal="true" aria-label="Formulario PQRS">
+                <button id="pqrs-close" aria-label="Cerrar"><i class="bi bi-x-lg"></i></button>
+
+                <div class="pqrs-panel-header">
+                    <div class="header-icon"><i class="bi bi-clipboard2-check-fill"></i></div>
+                    <div>
+                        <h5>Peticiones, Quejas,<br>Reclamos y Sugerencias</h5>
+                        <p>Tu opinión nos ayuda a mejorar</p>
+                    </div>
+                </div>
+
+                <div id="pqrs-form-wrapper">
+                    <form class="pqrs-form" id="pqrsForm" novalidate>
+                        <div class="mb-3">
+                            <label for="pqrs-tipo">Tipo de solicitud <span class="text-danger">*</span></label>
+                            <select class="form-select" id="pqrs-tipo" required>
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="1"> Petición</option>
+                                <option value="2"> Queja</option>
+                                <option value="3"> Reclamo</option>
+                                <option value="4"> Sugerencia</option>
+                            </select>
+                            <div class="invalid-feedback">Por favor selecciona un tipo.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pqrs-nombre">Nombre completo <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="pqrs-nombre" placeholder="Ej: Juan Pérez"
+                                required>
+                            <div class="invalid-feedback">Ingresa tu nombre.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pqrs-email">Correo electrónico <span class="text-danger">*</span></label>
+                            <input type="email" class="form-control" id="pqrs-email"
+                                placeholder="Ej: carlos.restrepo@ejemplo.com" required>
+                            <div class="invalid-feedback">Ingresa tu correo electronico.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pqrs-tel">Teléfono <span class="text-muted fw-normal">(opcional)</span></label>
+                            <input type="tel" class="form-control" id="pqrs-tel" placeholder="+57 300 000 0000">
+                        </div>
+                        <div class="pqrs-divider"></div>
+                        <div class="mb-3">
+                            <label for="pqrs-asunto">Asunto <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="pqrs-asunto"
+                                placeholder="Resumen breve de tu solicitud" required>
+                            <div class="invalid-feedback">Describe el asunto.</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="pqrs-mensaje">Descripción detallada <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="pqrs-mensaje"
+                                placeholder="Explícanos con detalle tu solicitud..." required></textarea>
+                            <div class="invalid-feedback">Por favor escribe tu mensaje.</div>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="bi bi-send-fill me-2"></i>Enviar PQRS
+                        </button>
+                    </form>
+                </div>
+
+                <div id="pqrs-success">
+                    <div class="success-icon"><i class="bi bi-check-lg"></i></div>
+                    <h5>¡Solicitud enviada!</h5>
+                    <p>Hemos recibido tu PQRS. Te responderemos al correo indicado en un plazo de 3 a 5 días hábiles.
+                    </p>
+                    <button class="btn-new" id="pqrs-new">Nueva solicitud</button>
+                </div>
+            </div>
+
         <div class="row footer-row">
             <div class="col-lg-6 col-md-5 col-sm-5">
                 <div id="footer-title">ToolStore</div>
@@ -149,5 +222,6 @@
     </div>
     <script src="./api/getProduct.js" type="module"></script>
     <script src="./js/contact.js"></script>
+    <script src="./js/pqrs.js"></script>
 </body>
 </html>

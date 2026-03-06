@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles.css">
 </head>
+
 <body>
     <!-- Navbar superior de la página -->
     <div id="nav-back-color">
@@ -46,7 +48,8 @@
                             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                             Quia temporibus asperiores, maxime perferendis expedita.
                         </p>
-                        <a href="./index.html#cardsContainerOne" class="btn btn-warning general-button">Ver Productos</a>
+                        <a href="./index.html#cardsContainerOne" class="btn btn-warning general-button">Ver
+                            Productos</a>
                     </div>
                 </div>
             </div>
@@ -83,52 +86,121 @@
             </div>
         </section>
     </main>
-    <!-- Sección del Footer -->
     <div id="footer-back-color">
-    <footer class="container">
-        <div class="row footer-row">
-            <div class="col-lg-6 col-md-5 col-sm-5">
-                <div id="footer-title">ToolStore</div>
-                <p class="footer-text">Nuestra visión es proporcionar calidad y ayudarte a mejorar tu trabajo con buenas herramientas.</p>
+        <footer class="container">
+
+            <button id="pqrs-trigger" aria-label="Abrir formulario PQRS" aria-expanded="false">
+                <i class="bi bi-chat-dots-fill pqrs-icon"></i>
+                <span class="pqrs-label">PQRS</span>
+            </button>
+
+            <div id="pqrs-panel" role="dialog" aria-modal="true" aria-label="Formulario PQRS">
+                <button id="pqrs-close" aria-label="Cerrar"><i class="bi bi-x-lg"></i></button>
+
+                <div class="pqrs-panel-header">
+                    <div class="header-icon"><i class="bi bi-clipboard2-check-fill"></i></div>
+                    <div>
+                        <h5>Peticiones, Quejas,<br>Reclamos y Sugerencias</h5>
+                        <p>Tu opinión nos ayuda a mejorar</p>
+                    </div>
+                </div>
+
+                <div id="pqrs-form-wrapper">
+                    <form class="pqrs-form" id="pqrsForm" novalidate>
+                        <div class="mb-3">
+                            <label for="pqrs-tipo">Tipo de solicitud <span class="text-danger">*</span></label>
+                            <select class="form-select" id="pqrs-tipo" required>
+                                <option value="" disabled selected>Selecciona una opción...</option>
+                                <option value="peticion">📋 Petición</option>
+                                <option value="queja">😟 Queja</option>
+                                <option value="reclamo">⚠️ Reclamo</option>
+                                <option value="sugerencia">💡 Sugerencia</option>
+                            </select>
+                            <div class="invalid-feedback">Por favor selecciona un tipo.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pqrs-nombre">Nombre completo <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="pqrs-nombre" placeholder="Ej: Juan Pérez"
+                                required>
+                            <div class="invalid-feedback">Ingresa tu nombre.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="pqrs-tel">Teléfono <span class="text-muted fw-normal">(opcional)</span></label>
+                            <input type="tel" class="form-control" id="pqrs-tel" placeholder="+57 300 000 0000">
+                        </div>
+                        <div class="pqrs-divider"></div>
+                        <div class="mb-3">
+                            <label for="pqrs-asunto">Asunto <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="pqrs-asunto"
+                                placeholder="Resumen breve de tu solicitud" required>
+                            <div class="invalid-feedback">Describe el asunto.</div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="pqrs-mensaje">Descripción detallada <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="pqrs-mensaje"
+                                placeholder="Explícanos con detalle tu solicitud..." required></textarea>
+                            <div class="invalid-feedback">Por favor escribe tu mensaje.</div>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="bi bi-send-fill me-2"></i>Enviar PQRS
+                        </button>
+                    </form>
+                </div>
+
+                <div id="pqrs-success">
+                    <div class="success-icon"><i class="bi bi-check-lg"></i></div>
+                    <h5>¡Solicitud enviada!</h5>
+                    <p>Hemos recibido tu PQRS. Te responderemos al correo indicado en un plazo de 3 a 5 días hábiles.
+                    </p>
+                    <button class="btn-new" id="pqrs-new">Nueva solicitud</button>
+                </div>
             </div>
-            <div class="col-lg col-md col-sm-5">
-                <div class="footer-subtitle">¿Quienes Somos?</div>
-                <p class="footer-text">Historia</p>
-                <p class="footer-text">Método de trabajo</p>
-                <p class="footer-text">Equipo</p>
-                <p class="footer-text">Proveedores</p>
+            <div class="row footer-row">
+                <div class="col-lg-6 col-md-5 col-sm-5">
+                    <div id="footer-title">ToolStore</div>
+                    <p class="footer-text">Nuestra visión es proporcionar calidad y ayudarte a mejorar tu trabajo con
+                        buenas herramientas.</p>
+                </div>
+                <div class="col-lg col-md col-sm-5">
+                    <div class="footer-subtitle">¿Quienes Somos?</div>
+                    <p class="footer-text">Historia</p>
+                    <p class="footer-text">Método de trabajo</p>
+                    <p class="footer-text">Equipo</p>
+                    <p class="footer-text">Proveedores</p>
+                </div>
+                <div class="col-lg col-md col-sm-5">
+                    <div class="footer-subtitle">Comunidad</div>
+                    <p class="footer-text">Eventos</p>
+                    <p class="footer-text">Blog</p>
+                    <p class="footer-text">Podcast</p>
+                    <p class="footer-text">Referidos</p>
+                </div>
+                <div class="col-lg col-md col-sm-5">
+                    <div class="footer-subtitle">Redes Sociales</div>
+                    <p class="footer-text">Discord</p>
+                    <p class="footer-text">Instagram</p>
+                    <p class="footer-text">Twitter</p>
+                    <p class="footer-text">Facebook</p>
+                </div>
             </div>
-            <div class="col-lg col-md col-sm-5">
-                <div class="footer-subtitle">Comunidad</div>
-                <p class="footer-text">Eventos</p>
-                <p class="footer-text">Blog</p>
-                <p class="footer-text">Podcast</p>
-                <p class="footer-text">Referidos</p>
+            <div class="row footer-row">
+                <div class="col-lg-7 col-md-6 col-sm-4">
+                    <div class="footer-last">©2026. All rights reserved</div>
+                </div>
+                <div class="col-lg col-md-2 col-sm-4">
+                    <div class="footer-last">Privacy & Policy</div>
+                </div>
+                <div class="col-lg col-md-2 col-sm-4">
+                    <div class="footer-last">Terms & Condition</div>
+                </div>
             </div>
-            <div class="col-lg col-md col-sm-5">
-                <div class="footer-subtitle">Redes Sociales</div>
-                <p class="footer-text">Discord</p>
-                <p class="footer-text">Instagram</p>
-                <p class="footer-text">Twitter</p>
-                <p class="footer-text">Facebook</p>
-            </div>
-        </div>
-        <div class="row footer-row">
-            <div class="col-lg-7 col-md-6 col-sm-4">
-                <div class="footer-last">©2026. All rights reserved</div>
-            </div>
-            <div class="col-lg col-md-2 col-sm-4">
-                <div class="footer-last">Privacy & Policy</div>
-            </div>
-            <div class="col-lg col-md-2 col-sm-4">
-                <div class="footer-last">Terms & Condition</div>
-            </div>
-        </div>
-    </footer>
+        </footer>
     </div>
     <script src="./js/script.js"></script>
     <script src="./js/loadUser.js" type="module"></script>
     <script src="./api/getProducts_index.js"></script>
     <script src="./js/contact.js"></script>
+    <script src="./js/pqrs.js"></script>
 </body>
+
 </html>

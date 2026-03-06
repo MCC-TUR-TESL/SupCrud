@@ -1,6 +1,6 @@
 /* Conexión de la fuente de Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url("./styles/pqrs.css");
 /* Configuración raíz para toda la página */
 * {
     margin: 0;

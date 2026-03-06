@@ -12,6 +12,7 @@ const PQRS = {
     nombreInput:document.getElementById('pqrs-nombre'),
     telInput:document.getElementById('pqrs-tel'),
     mensajeTextarea:document.getElementById('pqrs-mensaje'),
+    emailInput:document.getElementById('pqrs-email'),
 
 
     open() {
@@ -45,6 +46,7 @@ const PQRS = {
             tipo: this.tipoSelect.value,
             tipoText: this.tipoSelect.options[this.tipoSelect.selectedIndex].text.trim(),
             nombre: this.nombreInput.value,
+            email: this.emailInput.value,
             telefono: this.telInput.value,
             asunto: this.asuntoInput.value,
             mensaje: this.mensajeTextarea.value,

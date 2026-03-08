@@ -41,19 +41,28 @@ const PQRS = {
         this.success.style.display = 'none';
     },
 
-    captureFormData() {
+    async captureFormData() {
         const formData = {
-            tipo: this.tipoSelect.value,
-            tipoText: this.tipoSelect.options[this.tipoSelect.selectedIndex].text.trim(),
-            nombre: this.nombreInput.value,
+            full_name: this.nombreInput.value,
             email: this.emailInput.value,
-            telefono: this.telInput.value,
-            asunto: this.asuntoInput.value,
-            mensaje: this.mensajeTextarea.value,
-            fecha: new Date().toLocaleString('es-CO')
+            subject: this.asuntoInput.value,
+            description: this.mensajeTextarea.value,
         };
-        
-        console.log(formData);
+
+        const createPQRS = async (pqrs) => {
+            await fetch(`http://localhost:3003/pqrs`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(pqrs)
+            });
+        }
+        await createPQRS(formData)
+
+        await fetch(`https://accountcho.app.n8n.cloud/webhook/pqrs-nueva`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        });
     },
 
     init() {

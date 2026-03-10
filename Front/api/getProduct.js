@@ -56,7 +56,7 @@ document.querySelector("#buy-now").addEventListener('click', () => {
         iconColor: '#facc15'
     });
     console.log(product.stock);
-    
+
     product.stock -= 1;
     console.log(product.stock);
     console.log(product);
@@ -74,9 +74,18 @@ document.querySelector("#buy-now").addEventListener('click', () => {
 
     cargarEstadoProducto();
 
+    const params = new URLSearchParams({
+        name: product.name,
+        description: product.description,
+        price: String(product.price),
+        id: String(product.id),
+    });
+
+    window.open(`https://buy-buddy-route.lovable.app/payment?${params.toString()}`, "_blank");
+
 });
 
-document.querySelector("#wpp").addEventListener('click', ()=>{
+document.querySelector("#wpp").addEventListener('click', () => {
     const cel = '5733333333333';
     const message = `Hola ToolStore, me interesa el producto '${product.name}' de precio: ${product.price}`
     window.open(

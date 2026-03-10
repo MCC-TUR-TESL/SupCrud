@@ -109,12 +109,12 @@ app.get("/pqrs/:id", (req, res) => {
 
 // CREATE PQRS
 app.post("/pqrs", (req, res) => {
-  const { full_name, email, subject, description } = req.body;
+  const { full_name, email, subject, description, tr_id } = req.body;
   const query = `
-    INSERT INTO PQRS(full_name,email,subject,description,status_id)
-    VALUES(?,?,?,?,?)
+    INSERT INTO PQRS(full_name,email,subject,description,tr_id,status_id)
+    VALUES(?,?,?,?,?,?)
   `;
-  db.query(query, [full_name, email, subject, description, 1], (err, result) => {
+  db.query(query, [full_name, email, subject, description,tr_id, 1], (err, result) => {
     if (err) return res.status(500).json(err);
     res.json({ message: "PQRS creada", id: result.insertId });
   });

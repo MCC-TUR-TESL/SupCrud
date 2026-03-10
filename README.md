@@ -92,7 +92,7 @@ JSON - SERVER
 ### Crear el ``.env`` con las variables de entorno dentro de `Back/express`
 ```
 .env
-``
+```
 
 
 ### Dentro de la carpeta `Back/express` ejecutar:

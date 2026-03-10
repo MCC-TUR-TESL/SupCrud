@@ -47,6 +47,7 @@ const PQRS = {
             email: this.emailInput.value,
             subject: this.asuntoInput.value,
             description: this.mensajeTextarea.value,
+            tr_id: this.tipoSelect.value,
         };
 
         const createPQRS = async (pqrs) => {
@@ -58,7 +59,8 @@ const PQRS = {
         }
         await createPQRS(formData)
 
-        await fetch(`https://accountcho.app.n8n.cloud/webhook/pqrs-nueva`, {
+        // await fetch(`https://accountcho.app.n8n.cloud/webhook/pqrs-nueva`, {
+        await fetch(`https://n8n.andrescortes.dev/webhook/pqrs-nueva`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)

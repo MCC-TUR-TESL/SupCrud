@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "doc-generator": {
+      "command": "npx",
+      "args": [
+        "document-generator-mcp@latest"
+      ]
+    }
+  }
+}
